@@ -1,33 +1,65 @@
-# ABU Robocon 2024 – ROS 2 Codebase
+#  ABU Robocon 2024 – Team Nepal
 
-This repository contains the complete ROS 2 (Humble) workspace used by Team [Your Team Name] in ABU Robocon 2024 held in Vietnam.
+![ABU Robocon 2024 Logo](gallery/robocon2024_logo.webp)
 
-## 🏆 Competition Theme
-See [`docs/competition_theme.md`](docs/competition_theme.md) for full details.
+This repository contains the complete ROS 2 (Humble) workspace developed by **Team Nepal** for the **ABU Robocon 2024** robotics competition held in **Quảng Ninh, Vietnam** 🇻🇳.
 
-## 🧱 Workspace Overview
+🎥 **Watch our robot in action**: [YouTube Video](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-- ROS Distro: Humble
-- Base Image: Ubuntu 22.04
-- Tools: BehaviorTree.CPP, Nav2, Serial Comm, OAK-D integration
+---
 
-## 📦 Included Packages
+## 🏆 Competition Theme – "Harvest Day"
 
-| Package               | Description                                    | Link |
-|-----------------------|------------------------------------------------|------|
-| `action_pkg`          | Custom action definitions for control flows   | [Repo](https://github.com/youruser/action_pkg) |
-| `behaviour_plugins`   | BehaviorTree.CPP nodes + shared C++/Py lib    | [Repo](https://github.com/youruser/behaviour_plugins) |
-| `dev_pi_communicate`  | Serial and telemetry comms with dev boards    | [Repo](https://github.com/youruser/dev_pi_communicate) |
-| `line_follower`       | Line-following behavior logic + BT nodes      | [Repo](https://github.com/youruser/line_follower) |
-| `oakd_msgs`           | Custom messages for OAK-D vision system       | [Repo](https://github.com/youruser/oakd_msgs) |
+In ABU Robocon 2024, teams are challenged with a vibrant agricultural scenario based on the theme **"Harvest Day"**.
+The competition simulates a **Vietnamese rice harvest festival**, where two robots must cooperate autonomously and manually to:
 
-More details are available in [`docs/package_overview.md`](docs/package_overview.md)
+- **Navigate a stylized rice paddy field**
+- **Harvest rice balls placed at specific locations**
+- **Deliver harvested balls into storage zone**
+- **Stack rice balls storage zone into silos autonomously**
+- **Complete all tasks in the shortest time possible**
 
-## 🐳 Docker Setup
+Each match includes a **Harvesting Area**, **Collection Area**, and **Obstacles**.
+
+ Official Info: [Explore Robocon 2024 Theme and Rules (VTV)](https://english.vtv.vn/news/explore-robocon-2024-theme-and-rules-20240509104353646.htm)
+
+
+---
+
+## Workspace Overview
+
+- **ROS Distro**: Humble Hawksbill 🐢
+- **Base Image**: Ubuntu 22.04
+- **Key Tools**:
+  - BehaviorTree.CPP (v3)
+  - Nav2 Stack
+  - Serial Communication
+  - OAK-D DepthAI integration
+
+...
+
+## 📦 Included custom Packages
+
+The workspace is organized into modular ROS 2 packages, each handling a specific aspect of the robot's autonomy, control, or perception.
+
+| Package               | Description                                                        | Repository Link |
+|-----------------------|--------------------------------------------------------------------|------------------|
+| [`action_pkg`](packages/action_pkg/)            | Defines custom ROS 2 actions used across the system for asynchronous control flows. | [GitHub](https://github.com/kundanx/action_pkg) |
+| [`behaviour_plugins`](packages/behaviour_plugins/) | Implements BehaviorTree.CPP v3 plugins, and includes shared C++/Python libraries (`robotlibpc`) for controllers, math, crypto, etc. | [GitHub](https://github.com/kundanx/behaviour_plugins) |
+| [`dev_pi_communicate`](packages/dev_pi_communicate/) | Handles serial and telemetry communication between the robot and embedded devices like Raspberry Pi or STM32. | [GitHub](https://github.com/kundanx/dev_pi_communicate) |
+| [`line_follower`](packages/line_follower/)     | Contains behavior logic, perception modules, and BT nodes for line following, including motor control over serial. | [GitHub](https://github.com/kundanx/line_follower) |
+| [`oakd_msgs`](packages/oakd_msgs/)             | Defines custom ROS 2 message types used with the OAK-D DepthAI camera integration. | [GitHub](https://github.com/kundanx/oakd_msgs) |
+
+For more technical details about each package's structure and usage, see [`docs/package_overview.md`](docs/package_overview.md).
+
+---
+
+## 🐳 Docker Setup (Development Environment)
+
+To build and run the workspace using Docker:
 
 ```bash
-git clone --recurse-submodules https://github.com/youruser/robocon2024_ros2_ws
+git clone --recurse-submodules https://github.com/youruser/robocon2024_ros2_ws.git
 cd robocon2024_ros2_ws
 docker build -t robocon2024 .
 docker run -it robocon2024
-
