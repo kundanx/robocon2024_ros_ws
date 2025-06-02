@@ -1,0 +1,19 @@
+
+[submodule "packages/behaviour_plugins"]
+	path = packages/behaviour_plugins
+	url = https://github.com/kundanx/behaviour_plugins.git
+[submodule "packages/line_follower"]
+	path = packages/line_follower
+	url = https://github.com/kundanx/line_follower.git
+[submodule "packages/dev_pi_communicate"]
+	path = packages/dev_pi_communicate
+	url = https://github.com/kundanx/dev_pi_communicate.git
+[submodule "packages/oakd_msgs"]
+	path = packages/oakd_msgs
+	url = https://github.com/kundanx/oakd_msgs.git
+[submodule "packages/actin_pkg"]
+	path = packages/actin_pkg
+	url = https://github.com/kundanx/action_pkg.git
+[submodule "packages/action_pkg"]
+	path = packages/action_pkg
+	url = https://github.com/kundanx/action_pkg.git
