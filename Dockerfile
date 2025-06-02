@@ -50,7 +50,7 @@ RUN echo "source /opt/ros/humble/setup.bash" >> /home/user/.bashrc
 RUN mkdir -p /home/user/ros2_ws/src
 
 # Copy the entire project into the container workspace
-COPY --chown=user:user . /home/user/ros2_ws/src/
+COPY --chown=user:user packages/ /home/user/ros2_ws/src/
 
 WORKDIR /home/user/ros2_ws
 
