@@ -2,13 +2,10 @@
 
 ![ABU Robocon 2024 Logo](gallery/robocon2024_logo.webp)
 
-This repository contains the complete ROS 2 (Humble) workspace developed by **Team Nepal** for the **ABU Robocon 2024** robotics competition held in **Quảng Ninh, Vietnam** 🇻🇳.
+This repository contains the docker image for complete ROS 2 (Humble) workspace developed for the **ABU Robocon 2024** robotics competition held in **Quảng Ninh, Vietnam** 🇻🇳.
 
-🎥 **Watch our robot in action**: [YouTube Video](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
----
-
-## 🏆 Competition Theme – "Harvest Day"
+## Competition Theme – "Harvest Day"
 
 In ABU Robocon 2024, teams are challenged with a vibrant agricultural scenario based on the theme **"Harvest Day"**.
 The competition simulates a **Vietnamese rice harvest festival**, where two robots must cooperate autonomously and manually to:
@@ -38,9 +35,8 @@ Each match includes a **Harvesting Area**, **Collection Area**, and **Obstacles*
 
 ...
 
-## 📦 Included custom Packages
-
-The workspace is organized into modular ROS 2 packages, each handling a specific aspect of the robot's autonomy, control, or perception.
+## Included custom Packages
+Following are the packages developed for autonomy of the robot.
 
 | Package               | Description                                                        | Repository Link |
 |-----------------------|--------------------------------------------------------------------|------------------|
@@ -59,7 +55,7 @@ For more technical details about each package's structure and usage, see [`docs/
 To build and run the workspace using Docker:
 
 ```bash
-git clone --recurse-submodules https://github.com/youruser/robocon2024_ros2_ws.git
+git clone --recurse-submodules git@github.com:kundanx/robocon2024_ros_ws.git
 cd robocon2024_ros2_ws
 docker build -t robocon2024 .
 docker run -it robocon2024
